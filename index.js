@@ -96,7 +96,7 @@ io.on('connection', (socket) => {
   });
 });
 
-server.listen(3001, () => {
+server.listen("https://sketch-sync-backend-production.up.railway.app/", () => {
   console.log('✔️ Server listening on port 3001 ✔️')
 })
 
