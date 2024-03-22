@@ -4,6 +4,8 @@ const { Server } = require('socket.io');
 
 const app = express();
 
+const PORT = process.env.PORT || 3001;
+
 app.use(express.static("./public"));
 
 const server = http.createServer(app);
@@ -96,7 +98,7 @@ io.on('connection', (socket) => {
   });
 });
 
-server.listen(3001, "0.0.0.0", () => {
+server.listen(PORT, "0.0.0.0", () => {
   console.log('✔️ Server listening on port 3001 ✔️')
 })
 
